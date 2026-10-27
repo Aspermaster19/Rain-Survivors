@@ -1,0 +1,18 @@
+/* Variables, reset y estilos globales */
+
+:root{
+  --ink:#10283a; --sea:#0e5a7a; --mist:#eef4f7; --card:#fff;
+  --amber:#f5a524; --amber-soft:#fff3d6; --red:#e5383b; --red-soft:#ffe3e3; --ok:#2a9d6f;
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:#cfdde4}
+#app{position:relative;height:100%;max-width:430px;margin:0 auto;overflow:hidden;background:var(--mist);box-shadow:0 0 40px rgba(0,0,0,.2)}
+#map{position:absolute;inset:0;z-index:1}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque',sans-serif}
+
+
+/* Toast y accesibilidad */
+.toast{position:absolute;z-index:1200;left:50%;top:calc(max(12px,env(safe-area-inset-top)) + 70px);transform:translate(-50%,-30px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;transition:.3s;white-space:nowrap;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
